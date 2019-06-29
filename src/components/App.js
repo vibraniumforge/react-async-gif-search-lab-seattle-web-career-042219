@@ -6,10 +6,10 @@ import NavBar from "./NavBar";
 
 const App = () => {
   return (
-    <React.Fragment>
+    <div>
       <NavBar color="black" title="Giphy Search" />
       <GifListContainer />
-    </React.Fragment>
+    </div>
   );
 };
 
