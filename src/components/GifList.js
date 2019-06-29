@@ -4,7 +4,7 @@ class GifList extends Component {
   render() {
     const gifs = this.props.returnedData.map((item, index) => {
       return (
-        <li key={index}>
+        <li style={{ listStyleType: "none" }} key={index}>
           <img src={item.images.original.url} alt="" />
         </li>
       );

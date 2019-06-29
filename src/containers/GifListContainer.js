@@ -18,11 +18,7 @@ class GifListContainer extends Component {
       }&api_key=dc6zaTOxFJmzC&rating=g`
     )
       .then(res => res.json())
-      .then(res =>
-        this.setState({ returnedData: res.data }, () =>
-          console.log("t.s.rd=", this.state.returnedData)
-        )
-      )
+      .then(res => this.setState({ returnedData: res.data.slice(0, 3) }))
       .catch(err => console.log(err));
   };
 
@@ -33,9 +29,7 @@ class GifListContainer extends Component {
 
   handleSearchChange = e => {
     e.preventDefault();
-    this.setState({ queryTerm: e.target.value }, () =>
-      console.log(this.state.queryTerm)
-    );
+    this.setState({ queryTerm: e.target.value });
   };
 
   render() {

@@ -17,7 +17,7 @@ class GifSearch extends Component {
             value={this.props.queryTerm}
             onChange={this.props.handleSearchChange}
           />
-
+          <br />
           <input
             type="submit"
             id="search-bar-button"
