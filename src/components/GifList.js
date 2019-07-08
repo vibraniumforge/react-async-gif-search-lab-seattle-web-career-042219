@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class GifList extends Component {
-  render() {
-    const gifs = this.props.returnedData.map((item, index) => {
-      return (
-        <li style={{ listStyleType: "none" }} key={index}>
-          <img src={item.images.original.url} alt="" />
-        </li>
-      );
-    });
-    return (
-      <React.Fragment>
-        <ul>{gifs}</ul>
-      </React.Fragment>
-    );
-  }
-}
+const GifList = props => {
+  return (
+    <ul>
+      {props.returnedData.map(gif => {
+        return (
+          <li key={props.returnedData.id} style={{ listStyleType: "none" }}>
+            <img src={gif.images.original.url} alt="" />
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 export default GifList;
